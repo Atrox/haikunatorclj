@@ -7,5 +7,29 @@
 Generate Heroku-like random names to use in your clojure applications.
 
 ## Usage
+```clojure
+(ns test
+  (:require [haikunator :refer [haikunate]]))
 
-TODO
+(haikunate)
+; => "lucky-mode-0284"
+
+(haikunate {:token-length 6})
+; => "purple-dream-251709"
+
+(haikunate {:token-chars "HAIKUNATE"})
+; => "sparkling-hat-IATI"
+
+(haikunate {:token-length 0})
+; => "sparkling-bread"
+
+(haikunate {:delimiter "."})
+; => "tight.poetry.7673"
+
+(haikunate {:token-length 0 :delimiter " "})
+; => "lingering bar"
+
+(haikunate {:token-length 0 :delimiter ""})
+; => "floralcredit"
+
+```
